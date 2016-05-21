@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -59,6 +59,14 @@
                                     <segue destination="npa-2n-RcB" kind="show" id="FWl-xe-i0g"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-jC-Lji" customClass="GIDSignInButton">
+                                <rect key="frame" x="200" y="516" width="200" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Mqc-25-Ouy"/>
+                                    <constraint firstAttribute="height" constant="44" id="xIK-J2-b6S"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="LoginButton"/>
@@ -67,6 +75,7 @@
                             <constraint firstItem="sf2-wR-BE8" firstAttribute="top" secondItem="15B-fx-1XI" secondAttribute="bottom" constant="22" id="8WI-ew-qrK"/>
                             <constraint firstItem="pIt-PK-WJQ" firstAttribute="trailing" secondItem="sf2-wR-BE8" secondAttribute="trailing" id="9Uz-sD-RaY"/>
                             <constraint firstItem="Jd1-1z-AwS" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="left" id="D76-7e-Ak5"/>
+                            <constraint firstItem="pIt-PK-WJQ" firstAttribute="top" secondItem="dg8-jC-Lji" secondAttribute="bottom" constant="10" id="ELP-GS-EFq"/>
                             <constraint firstItem="c5K-gO-teW" firstAttribute="leading" secondItem="sf2-wR-BE8" secondAttribute="leading" id="Ery-pH-6eP"/>
                             <constraint firstItem="c5K-gO-teW" firstAttribute="top" secondItem="sf2-wR-BE8" secondAttribute="bottom" constant="41" id="FkF-UT-oeH"/>
                             <constraint firstItem="pIt-PK-WJQ" firstAttribute="trailing" secondItem="sf2-wR-BE8" secondAttribute="trailing" id="O2J-Yu-USU"/>
@@ -78,6 +87,7 @@
                             <constraint firstItem="Jd1-1z-AwS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rjk-Ig-UaX"/>
                             <constraint firstItem="15B-fx-1XI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="thI-bH-3o0"/>
                             <constraint firstItem="sf2-wR-BE8" firstAttribute="width" secondItem="15B-fx-1XI" secondAttribute="width" id="uDL-yU-3wP"/>
+                            <constraint firstItem="dg8-jC-Lji" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uen-HK-2Ln"/>
                             <constraint firstItem="pIt-PK-WJQ" firstAttribute="bottom" secondItem="c5K-gO-teW" secondAttribute="bottom" id="xU1-Ay-KD2"/>
                             <constraint firstItem="Jd1-1z-AwS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="xgv-z5-ThU"/>
                         </constraints>
@@ -91,6 +101,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qJQ-d1-MqI"/>
                     <connections>
+                        <outlet property="googleSignInButton" destination="dg8-jC-Lji" id="hdN-Yg-HPs"/>
                         <outlet property="loginAction" destination="pIt-PK-WJQ" id="ArJ-pS-aTn"/>
                         <outlet property="loginEmail" destination="15B-fx-1XI" id="lc0-CC-THo"/>
                         <outlet property="loginPassword" destination="sf2-wR-BE8" id="Zi4-xT-Lyn"/>

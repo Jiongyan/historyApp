@@ -16,6 +16,7 @@
 		58E4E9E31CF046FE0035B238 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E4E9DD1CF046FE0035B238 /* cloud.png */; };
 		58E4E9E41CF046FE0035B238 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E4E9DE1CF046FE0035B238 /* clear.png */; };
 		58E4E9E51CF046FE0035B238 /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E4E9DF1CF046FE0035B238 /* rain.png */; };
+		58E4E9ED1CF0546B0035B238 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58E4E9EC1CF0546B0035B238 /* GoogleService-Info.plist */; };
 		58E84DAF1CF006400080B1FE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E84D9A1CF004B00080B1FE /* NotificationCenter.framework */; };
 		58E84DB21CF006400080B1FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E84DB11CF006400080B1FE /* TodayViewController.swift */; };
 		58E84DB51CF006400080B1FE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E84DB31CF006400080B1FE /* MainInterface.storyboard */; };
@@ -101,6 +102,7 @@
 		58E4E9DD1CF046FE0035B238 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		58E4E9DE1CF046FE0035B238 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
 		58E4E9DF1CF046FE0035B238 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		58E4E9EC1CF0546B0035B238 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58E84D9A1CF004B00080B1FE /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		58E84DAE1CF006400080B1FE /* History.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = History.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E84DB11CF006400080B1FE /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		93262B141CAC077100989E2D /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				58E4E9EC1CF0546B0035B238 /* GoogleService-Info.plist */,
 				93153CD21CAA61BA004B223A /* Main.storyboard */,
 				9341BEE41CA90D2F00E69DF4 /* AppDelegate.swift */,
 				9341BEF01CA90D2F00E69DF4 /* LaunchScreen.storyboard */,
@@ -495,6 +498,7 @@
 				93262B201CB09A3100989E2D /* qingming2.jpg in Resources */,
 				93262B221CB09A3800989E2D /* chenbridge.jpg in Resources */,
 				9341BEEF1CA90D2F00E69DF4 /* Assets.xcassets in Resources */,
+				58E4E9ED1CF0546B0035B238 /* GoogleService-Info.plist in Resources */,
 				93153CD11CAA479E004B223A /* great-wall-china2.jpg in Resources */,
 				93262B1F1CB09A3100989E2D /* qingming1.jpg in Resources */,
 				932476251CAB947E00243BC4 /* Song_Dynasty.jpg in Resources */,
