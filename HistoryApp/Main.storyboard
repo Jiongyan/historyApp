@@ -600,7 +600,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="9fx-aY-bFU">
             <objects>
-                <tabBarController id="npa-2n-RcB" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarController" id="npa-2n-RcB" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="EBW-bi-7Xd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

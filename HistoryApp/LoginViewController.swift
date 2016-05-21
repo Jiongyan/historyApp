@@ -26,6 +26,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().uiDelegate = self
     }
     
+    override func viewWillAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(receiveToggleAuthUINotification), name: "ToggleAuthUINotification", object: nil)
+    }
+    
     // pressed the Sign In button
     func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
         
@@ -43,6 +47,24 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         self.dismissViewControllerAnimated(true, completion: {
             
         })
+    }
+    
+    func receiveToggleAuthUINotification(notification: NSNotification) {
+        if (notification.name == "ToggleAuthUINotification") {
+            if notification.userInfo != nil {
+                let userInfo:Dictionary<String,GIDGoogleUser> =
+                    notification.userInfo as! Dictionary<String,GIDGoogleUser>
+                
+                if let user : GIDGoogleUser = userInfo["user"] {
+                    
+                    //FIXME: save user in userdefault
+                    let tabBarController : UITabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tabbarController") as! UITabBarController
+                    presentViewController(tabBarController, animated: true, completion: nil)
+                    
+                }
+                
+            }
+        }
     }
 
 }
