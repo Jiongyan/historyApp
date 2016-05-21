@@ -16,7 +16,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, LocationDelegate
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
-    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     let locationManager = LocationManager()
     
@@ -34,6 +34,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, LocationDelegate
         let dataFormatter = NSDateFormatter()
         dataFormatter.dateFormat = "h:mm a"
         timeLabel.text = dataFormatter.stringFromDate(NSDate())
+        
+        spinner.hidesWhenStopped = true
+        spinner.startAnimating()
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,6 +97,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, LocationDelegate
                             }
                                                         
                             dispatch_async(dispatch_get_main_queue(), { 
+                                
+                                self.spinner.stopAnimating()
                                 
                                 self.locationLabel.text = cityName
                                 
