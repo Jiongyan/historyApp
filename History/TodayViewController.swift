@@ -14,8 +14,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, LocationDelegate
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     
     
     let locationManager = LocationManager()
@@ -80,14 +80,50 @@ class TodayViewController: UIViewController, NCWidgetProviding, LocationDelegate
                         print("dict = \(dict)")
                         
                         if let weather = dict["main"] as? Dictionary<String, AnyObject>,
-                            let cityName = dict["name"] as? String{
+                            let cityName = dict["name"] as? String,
+                            let temp = weather["temp"] as? Double,
+                            let descriptionArr = dict["weather"] as? Array<Dictionary<String, AnyObject>>{
                             print("weather = \(weather)")
                             
+                            var newDespString = ""
+                            for description in descriptionArr {
+                                
+                                if let desp = description["description"] as? String {
+                                    newDespString += desp
+                                }
+                            }
+                                                        
                             dispatch_async(dispatch_get_main_queue(), { 
                                 
                                 self.locationLabel.text = cityName
                                 
+                                self.tempLabel.text = String(format: "%.1f˚", temp)
                                 
+                                if newDespString.rangeOfString("clear sky") != nil {
+                                    
+                                    self.imgView.image = UIImage(named: "clear.png")
+                                    
+                                } else if newDespString.rangeOfString("clouds") != nil {
+                                    
+                                    self.imgView.image = UIImage(named: "cloud.png")
+                                    
+                                } else if newDespString.rangeOfString("rain") != nil {
+                                    
+                                    self.imgView.image = UIImage(named: "rain.png")
+                                    
+                                } else if newDespString.rangeOfString("thunderstorm") != nil {
+                                    
+                                    self.imgView.image = UIImage(named: "thunderstorm.png")
+                                    
+                                } else if newDespString.rangeOfString("snow") != nil {
+                                    
+                                    self.imgView.image = UIImage(named: "snow.png")
+                                    
+                                }else if newDespString.rangeOfString("mist") != nil {
+                                    
+                                    self.imgView.image = UIImage(named: "mist.png")
+                                    
+                                }
                                 
                             })
                             

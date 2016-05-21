@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,40 +19,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56Y-Jj-rDB" userLabel="Time">
-                                <rect key="frame" x="16" y="8" width="38" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56Y-Jj-rDB" userLabel="Time">
+                                <rect key="frame" x="24" y="8" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42" userLabel="Location">
-                                <rect key="frame" x="16" y="29" width="65.5" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42" userLabel="Location">
+                                <rect key="frame" x="24" y="8" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0v-cP-0sP" userLabel="Temp">
-                                <rect key="frame" x="264" y="8" width="40" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0v-cP-0sP" userLabel="Temp">
+                                <rect key="frame" x="224" y="8" width="80" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="ofL-Ej-INJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="ofL-Ej-INJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-w1-QHS">
-                                <rect key="frame" x="202" y="29" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSP-Vj-gdd">
+                                <rect key="frame" x="195" y="8" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PSP-Vj-gdd" secondAttribute="height" multiplier="1:1" id="5pX-yZ-dEx"/>
+                                    <constraint firstAttribute="width" constant="44" id="fkF-ia-soB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="a0v-cP-0sP" firstAttribute="leading" secondItem="qeF-w1-QHS" secondAttribute="trailing" constant="20" id="8Y9-BZ-tEq"/>
                             <constraint firstItem="a0v-cP-0sP" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="Ads-oq-h8i"/>
-                            <constraint firstItem="56Y-Jj-rDB" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="BIQ-Bf-q1a"/>
-                            <constraint firstItem="qeF-w1-QHS" firstAttribute="baseline" secondItem="a0v-cP-0sP" secondAttribute="baseline" id="JV5-2l-tbA"/>
+                            <constraint firstItem="56Y-Jj-rDB" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="8" id="BIQ-Bf-q1a"/>
+                            <constraint firstItem="PSP-Vj-gdd" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="M6Z-MX-uNJ"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="56Y-Jj-rDB" secondAttribute="bottom" id="V5n-QG-0eL"/>
+                            <constraint firstItem="a0v-cP-0sP" firstAttribute="leading" secondItem="PSP-Vj-gdd" secondAttribute="trailing" constant="-15" id="XCj-Tm-lEz"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="56Y-Jj-rDB" secondAttribute="leading" id="loc-hq-l02"/>
                             <constraint firstItem="56Y-Jj-rDB" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="nHs-jf-YTx"/>
                             <constraint firstItem="a0v-cP-0sP" firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" id="oO1-4f-dTn"/>
@@ -65,7 +67,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="60"/>
                     <connections>
-                        <outlet property="iconLabel" destination="qeF-w1-QHS" id="Htj-Y9-Crn"/>
+                        <outlet property="imgView" destination="PSP-Vj-gdd" id="P05-4w-GeT"/>
                         <outlet property="locationLabel" destination="GcN-lo-r42" id="stH-at-hzL"/>
                         <outlet property="tempLabel" destination="a0v-cP-0sP" id="soy-0c-nKV"/>
                         <outlet property="timeLabel" destination="56Y-Jj-rDB" id="tLc-C0-7Qg"/>
